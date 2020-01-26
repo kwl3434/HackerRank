@@ -40,14 +40,8 @@ int CalculateMaxWorkshops(Available_Workshops* a_w) {
             return a.end_time < b.end_time;
         }
     };
-    auto print = [a_w]() {
-        for (int i = 0; i < a_w->signup_size; i++) {
-            cout << a_w->pworkshops[i].start_time << " " << a_w->pworkshops[i].end_time << endl;
-        }
-    };
-    print();
+
     sort(a_w->pworkshops, a_w->pworkshops + a_w->signup_size, comp);
-    print();
 
     int MAX = 0;
     int end_prev = 0;
