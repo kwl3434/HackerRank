@@ -21,7 +21,7 @@ int birthday(vector<int> s, int d, int m) {
     for (int i; i < s.size(); i++) {
         total += s[i];
         if (m_count == m) {
-            total -= s[i - m]; //total -= prev
+            total -= s[i - m]; //total -= first_prev
         }
         else {
             m_count++;
